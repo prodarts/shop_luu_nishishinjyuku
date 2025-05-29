@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans JP', 'Meiryo', sans-serif;
+  background: #f7f5ef;
+  color: #48423b;
+  letter-spacing: 0.04em;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #faf8f3 60%, #f4ede1 100%);
+  padding: 2rem 1rem 1.5rem 1rem;
+  text-align: center;
+  border-bottom: 2.5px solid #f4debb;
+  box-shadow: 0 2px 15px #f6efe366;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  color: #4b3b24;
+  letter-spacing: 0.07em;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.4rem;
+    padding: 0.6em 0.2em;
+  }
+}
+
+/* Section Title */
+h2 {
+  color: #be7b28;
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  border-left: 4px solid #ffe1a8;
+  padding-left: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  background: none;
+  text-shadow: none;
+}
+
+/* Main Container */
+main {
+  max-width: 780px;
+  margin: -1rem auto 2rem;
+  padding: 2rem 1.2rem;
+  background: #fffdfa;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 20px #e1dbc999;
+}
+
+ul, dl {
+  margin: 1rem 0 1.5rem 1.5rem;
+}
+
+ul li, dl dd {
+  background: #f9f6f1;
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.7rem;
+  border-radius: 0.7rem;
+  border-left: 3px solid #f1e2be;
+  color: #594b38;
+}
+
+dl dt {
+  color: #ba993d;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+a {
+  color: #7a5932;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #be7b28;
+}
+
+footer {
+  text-align: center;
+  padding: 1.4rem 0 0.7rem 0;
+  color: #baa886;
+  font-size: 1rem;
+  border-top: 1px solid #f1e2be;
+  background: #f7f5ef;
+}
+
+.menu-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6em;
+  margin: 0 0 1.5em 0;
+}
+
+.menu-images img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 1.1em;
+  box-shadow: 0 2px 16px rgba(80,72,60,0.08);
+  border: 1.5px solid #f6efe3;
+  background: #fff;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+@media (max-width: 700px) {
+  .menu-images img {
+    max-width: 98vw;
+    border-radius: 0.7em;
+  }
+}
+
+ul {
+  list-style: none;
+  padding-left: 1.1em;
+  margin-left: 0;
+}
+
+.lang-switch {
+  text-align: right;
+  margin-top: 0.3em;
+  margin-bottom: 0.5em;
+}
+.lang-switch a {
+  display: inline-block;
+  padding: 0.4em 1.2em;
+  border: 2px solid #ead8bb;
+  border-radius: 2em;
+  background: #f9f5ed;
+  color: #8e6e47;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background 0.15s, box-shadow 0.18s;
+  box-shadow: 0 2px 10px rgba(215,182,130,0.08);
+}
+.lang-switch a:hover,
+.lang-switch a:focus {
+  background: #ffe1a8;
+  color: #593a1c;
+  box-shadow: 0 3px 20px #f8e5c9;
+}
+
+/* FAQ dd モバイル対応 */
+@media (max-width: 700px) {
+  dl dd {
+    padding: 0.8em 0.8em;
+    font-size: 0.98em;
+  }
+}
+
+@media (max-width: 500px) {
+  main { padding: 1em 0.2em; }
+  .menu-images img { max-width: 100vw; }
+}
+.hero img {
+  width: 75%;
+  max-width: 420px;
+  height: auto;
+  margin: 2.2rem auto 1.2rem auto;
+  border-radius: 1.1em;
+  box-shadow: 0 2px 16px rgba(80,72,60,0.08);
+  border: 1.5px solid #f6efe3;
+  background: #fff;
+  display: block;
+  object-fit: cover;
+}
+@media (max-width: 700px) {
+  .hero img {
+    width: 94vw;
+    max-width: 98vw;
+    margin: 1.3rem auto 0.7rem auto;
+  }
+}
+header h1 {
+  font-size: 2.0rem;
+  line-height: 1.13;
+  letter-spacing: 0.05em;
+  margin: 0;
+  color: #4b3b24;
+}
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.1rem;
+    padding: 0.5em 0.2em;
+    line-height: 1.17;
+  }
+}
