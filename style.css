@@ -198,3 +198,10 @@ header h1 {
     line-height: 1.17;
   }
 }
+.hero a img {
+  transition: filter 0.2s;
+}
+.hero a:hover img {
+  filter: brightness(0.8);
+  cursor: pointer;
+}
