@@ -198,10 +198,89 @@ header h1 {
     line-height: 1.17;
   }
 }
+.hero img {
+  width: 500px;     /* ここで幅を変える 例: 500px */
+  height: auto;     /* アスペクト比維持で自動調整 */
+  border-radius: 32px; /* 角丸（お好みで） */
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.15); /* ふんわり影（お好みで） */
+}
 .hero a img {
   transition: filter 0.2s;
 }
 .hero a:hover img {
   filter: brightness(0.8);
   cursor: pointer;
+}
+/* =================================== */
+/* SNSアイコン＋言語リンクをセンター寄せ */
+/* =================================== */
+.sns-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;              /* アイコンやリンク間の余白 */
+  margin: 16px 0;         /* ヘッダー・フッター上下の余白 */
+}
+
+/* 共通：SNSアイコン */
+.sns-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 4px;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.sns-icon img {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
+/* ホバー時エフェクト（共通） */
+.sns-icon:hover {
+  transform: scale(1.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+  background: #f7f7f7;
+}
+
+/* Instagram アイコン固有のホバーカラー */
+.sns-icon.ig:hover img {
+  filter: brightness(0) saturate(100%) invert(37%) sepia(88%) saturate(693%) hue-rotate(315deg) brightness(93%) contrast(101%);
+}
+
+/* X アイコン固有のホバーカラー */
+.sns-icon.x:hover img {
+  filter: brightness(0) saturate(100%) invert(60%) sepia(39%) saturate(2054%) hue-rotate(166deg) brightness(95%) contrast(96%);
+}
+
+/* 日本語リンク（英語版ページの言語切り替えリンク） */
+.link-ja {
+  font-size: 1rem;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.15s ease;
+}
+
+.link-ja:hover {
+  color: #007acc; /* ホバー時の色をお好みで調整してください */
+}
+
+/* レスポンシブ対応：画面幅が小さいとき */
+@media (max-width: 600px) {
+  .sns-center {
+    gap: 16px;
+    margin: 12px 0;
+  }
+  .sns-icon img {
+    width: 28px;
+    height: 28px;
+  }
+  .link-ja {
+    font-size: 0.9rem;
+  }
 }
